@@ -36,14 +36,14 @@ body {
   background-color: bisque;
 }
 
-.article {
+/*.article {
   height: 1, 152px;
   padding: 0px 160px 0px 160px;
   gap: 45px;
   background-color: darkgray;
   display: flex;
   flex-direction: column;
-}
+}*/
 
 .footer {
   width: 1, 440px;
