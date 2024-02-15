@@ -6,11 +6,6 @@ body {
   background-color: rgba(241, 241, 241, 1);
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-}
-
 .medium-text {
   height: 70px;
   padding: 24px 160px 24px 160px;
