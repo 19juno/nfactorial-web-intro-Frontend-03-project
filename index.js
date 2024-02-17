@@ -41,10 +41,10 @@ function createArticles(product) {
           <p>·</p>
           <p id="publishedDate">${product.published_date}</p>
         </div>
-        <p>
+        <a class='article-anchor' data-id='${product.id}'>
           <h4 id="title">${product.title}</h4>
           <p style='font-size: 16px' id='body'>${product.abstract}</p>
-        </p>       
+        </a>       
         <div id='details' class="d-flex justify-content-between align-items-baseline   w-75">
           <div style='font-size: 14px; width: 400px' class="d-flex justify-content-between g-5 align-items-baseline"> 
             <button style='font-size: 14px' class="btn btn-secondary btn-lg rounded-pill" id="button">${product.source}</button>
@@ -63,7 +63,7 @@ function createArticles(product) {
   
 `;
 }
-
+let idd = null;
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("container");
 
@@ -74,22 +74,28 @@ document.addEventListener("DOMContentLoaded", function () {
       return result.json();
     })
     .then((data) => {
-      data.results.splice(0, 5).forEach((element, index) => {
+      data.results.splice(3, 5).forEach((element) => {
         console.log(element);
         //console.log(index);
         container.innerHTML += createArticles(element);
         // document.getElementById("button").onclick = function () {   // здесь у меня переходило на другую страницу, но почему то выходило предупреждение
         //   window.location.href = "https://www.nytimes.com/";   // почему?
         // };
+        const anchors = document.querySelectorAll(".article-anchor");
+        console.log(anchors);
+        anchors.forEach((anchor) => {
+          anchor.addEventListener("click", function () {
+            idd = this.dataset.id;
+            alert("yes this is idd:" + idd);
+            window.location.href = "article.html?id=" + idd;
+            if (window.location.pathname === `/article.html?id=${idd}`) {
+              console.log("this is the 2nd");
+            }
+          });
+        });
       });
     })
     .catch((err) => {
       console.log("Error: ", err);
     });
-
-  // const anchor = document.getElementById("anchor");
-  // console.log(anchor);
-  // anchor.addEventListener("click", function () {
-  //   alert(`yes this is ${index}`);
-  // });
 });
