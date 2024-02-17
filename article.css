@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Kanit:wght@500&display=swap");
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 
 body {
   width: 1, 440px;
@@ -37,4 +38,85 @@ body {
   letter-spacing: 0em;
   text-align: center;
   color: rgba(8, 30, 52, 1);
+}
+
+#container2 {
+  height: 1, 718px;
+  padding: 96px 160px 36px 160px;
+  border: 0px 0px 1px 0px;
+  gap: 100px;
+}
+.article {
+  width: 1, 120px;
+  height: 1, 586px;
+  gap: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navbar {
+  width: 1, 120px;
+  height: 64px;
+  gap: 697px;
+  display: flex;
+}
+.leftPart {
+  width: 340px;
+  height: 64px;
+  gap: 16px;
+  display: flex;
+}
+.avatar {
+  width: 64px;
+  height: 64px;
+}
+.detail {
+  width: 323px;
+  height: 52px;
+  gap: 12px;
+}
+
+#Authors_name {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.date {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 1);
+}
+.postContainer {
+  height: 98px;
+  gap: 24px;
+}
+.title {
+  font-family: Inter;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+.description {
+  font-family: "SF Pro Display";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.postImage {
+  width: 1120px;
+  height: 480px;
+  border-radius: 4px;
 }
