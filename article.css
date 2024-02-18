@@ -41,38 +41,38 @@ body {
 }
 
 #container2 {
-  height: 1, 718px;
+  height: auto;
   padding: 96px 160px 36px 160px;
   border: 0px 0px 1px 0px;
-  gap: 100px;
+  /*gap: 100px;*/
 }
 .article {
   width: 1, 120px;
-  height: 1, 586px;
-  gap: 70px;
+  height: auto;
+  /*gap: 70px;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .navbar {
   width: 1, 120px;
-  height: 64px;
+  height: auto;
   gap: 697px;
   display: flex;
 }
 .leftPart {
   width: 340px;
-  height: 64px;
+  height: auto;
   gap: 16px;
   display: flex;
 }
 .avatar {
   width: 64px;
-  height: 64px;
+  height: auto;
 }
 .detail {
   width: 323px;
-  height: 52px;
+  height: auto;
   gap: 12px;
 }
 
@@ -95,7 +95,7 @@ body {
   color: rgba(0, 0, 0, 1);
 }
 .postContainer {
-  height: 98px;
+  height: auto;
   gap: 24px;
 }
 .title {

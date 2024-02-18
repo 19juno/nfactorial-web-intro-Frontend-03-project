@@ -5,6 +5,7 @@
 // https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=aqZsj43Ra16S7xvfVZ25GcAotMD9qFnX
 
 function createArticles(product) {
+  //
   return `
   <div id="article" style='height: 310px' class="d-flex justify-content-between border-bottom border-2 mb-5" >
     <div id="textPart" style='width: 755px' class="d-flex flex-column justify-content-around
@@ -40,6 +41,7 @@ function createArticles(product) {
 }
 
 function createPost(product) {
+  // создает  пост для второй страницы
   return `
   <div class="article">
           <div class="navbar">
@@ -118,8 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
             .then((data) => {
               const container2 = document.getElementById("container2");
               const neededPost = data.results.find((item) => item.id == idddd);
-              console.log(neededPost);
-              console.log(neededPost.title);
+              //console.log(neededPost);
+              //console.log(neededPost.title);
               container2.innerHTML += createPost(neededPost);
             });
         }
